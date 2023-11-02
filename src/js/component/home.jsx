@@ -1,24 +1,23 @@
 import React from "react";
+import Counter from "./counter";
+import { useEffect } from 'react';
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const second {
+	'1' 
+}
 
-//create your first component
-const Home = () => {
+const Home = (props) => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container mt-5">
+			<div className="d-flex flex-row justify-content-evenly rounded align-items-center" style={{width: '80rem', height:'16rem', backgroundColor: 'rgb(9, 9, 9)'}}>
+				<Counter />
+				<Counter />
+				<Counter />
+				<Counter />
+				<Counter />
+				<Counter />
+				<Counter number={second} />
+			</div>
 		</div>
 	);
 };
